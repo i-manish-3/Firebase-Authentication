@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <span class="error" id="password-error"></span>
+            </div>
+            <button type="button" id="register">Sign Up</button>
+        </form>
+    </div>
+<!-- 
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script> -->
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+<!-- <script type="module" >
+	  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+	  import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+    const firebaseConfig = {
+    apiKey: "AIzaSyAQgr3UdVY0kveJjtFsTYYYewBj5_Jrv48",
+    authDomain: "authentication-df9d2.firebaseapp.com",
+    projectId: "authentication-df9d2",
+    storageBucket: "authentication-df9d2.appspot.com",
+    messagingSenderId: "578361908860",
+    appId: "1:578361908860:web:544d1d33a16b3e215a33f9"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+console.log(app);
+
+
+
+//----- New Registration code start	  
+document.getElementById("register").addEventListener("click", function() {
+    var email =  document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    //For new registration
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user);
+    alert("Registration successfully!!");
+    // ...
+    })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    console.log(errorMessage);
+    alert(error);
+    });		  		  
+}); -->
+
+<!-- </script> -->
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
